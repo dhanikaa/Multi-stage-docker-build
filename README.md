@@ -99,7 +99,11 @@ By using a multi-stage build, we reduce the final image size considerably, as sh
 - **Build Stage Image Size**: Includes OS dependencies, compilers, and all necessary tools (typically much larger).
 - **Final Stage Image Size**: Contains only the binary and minimal dependencies, reducing the overall image size and load time.
 
-For this Go application, the multi-stage approach results in an image containing only the compiled Go binary, making it compact and efficient.
+In this project, you can observe the difference in image sizes:
+- **Single-Stage Image (`simplecalculator`):** 650MB
+- **Multi-Stage Image (`simplecalculator-multi`):** 6.49MB
+
+As seen in the screenshot, the multi-stage build reduces the image size drastically, making the container lighter, faster to deploy, and more secure.
 
 ---
 
